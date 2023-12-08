@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cee163adfb6a29c729b8a1f977c2a776 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+        <h3 align="center" style="font-size:20px; margin-bottom:0; padding: 10px; background-color: white; opacity: 0.8;"><b>Parcel of Interest and their Fertilization</b></h3>
+    
+    
+        <p align="center" style="font-size:16px; margin-top:0; padding: 5px; background-color: white; opacity: 0.8;">Extraction_Colza_Grangeneuve</p>
+    
+    
+            <div class="folium-map" id="map_cee163adfb6a29c729b8a1f977c2a776" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cee163adfb6a29c729b8a1f977c2a776 = L.map(
+                "map_cee163adfb6a29c729b8a1f977c2a776",
+                {
+                    center: [46.76780194383927, 7.113222308868548],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 19,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f659d50ba87a1d217fe581153e571e56 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cee163adfb6a29c729b8a1f977c2a776);
+        
+    
+        function geo_json_8ffab3c838d724739cc2fd6097752e36_styler(feature) {
+            switch(feature.id) {
+                case "0": 
+                    return {"color": "#66c2a5", "fillColor": "#66c2a5", "fillOpacity": 0.7, "weight": 2};
+                case "2": 
+                    return {"color": "#8da0cb", "fillColor": "#8da0cb", "fillOpacity": 0.7, "weight": 2};
+                default:
+                    return {"color": "#fc8d62", "fillColor": "#fc8d62", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_8ffab3c838d724739cc2fd6097752e36_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8ffab3c838d724739cc2fd6097752e36 = L.geoJson(null, {
+                onEachFeature: geo_json_8ffab3c838d724739cc2fd6097752e36_onEachFeature,
+            
+                style: geo_json_8ffab3c838d724739cc2fd6097752e36_styler,
+        });
+
+        function geo_json_8ffab3c838d724739cc2fd6097752e36_add (data) {
+            geo_json_8ffab3c838d724739cc2fd6097752e36
+                .addData(data)
+                .addTo(map_cee163adfb6a29c729b8a1f977c2a776);
+        }
+            geo_json_8ffab3c838d724739cc2fd6097752e36_add({"bbox": [7.112365536547695, 46.767564652907026, 7.114080396585265, 46.76804441098742], "features": [{"bbox": [7.113632086045535, 46.76773636727145, 7.114080396585265, 46.76804441098742], "geometry": {"coordinates": [[[7.113632086045535, 46.7680030395104], [7.114020187809812, 46.76804441098742], [7.114080396585265, 46.76777773854513], [7.113692296695861, 46.76773636727145], [7.113632086045535, 46.7680030395104]]], "type": "Polygon"}, "id": "0", "properties": {"Lieux": "Grangeneuve", "Plante": "Colza", "Traitement": "0N", "id": null}, "type": "Feature"}, {"bbox": [7.1129997476003535, 46.76764474509044, 7.11344514740035, 46.76795078930478], "geometry": {"coordinates": [[[7.1129997476003535, 46.767911771923835], [7.113388364747138, 46.76795078930478], [7.11344514740035, 46.76768376227924], [7.1130565321386765, 46.76764474509044], [7.1129997476003535, 46.767911771923835]]], "type": "Polygon"}, "id": "1", "properties": {"Lieux": "Grangeneuve", "Plante": "Colza", "Traitement": "Nmin", "id": null}, "type": "Feature"}, {"bbox": [7.112365536547695, 46.767564652907026, 7.1128109363476915, 46.76787069712136], "geometry": {"coordinates": [[[7.112365536547695, 46.76783167974042], [7.112754153694479, 46.76787069712136], [7.1128109363476915, 46.76760367009582], [7.112422321086018, 46.767564652907026], [7.112365536547695, 46.76783167974042]]], "type": "Polygon"}, "id": "2", "properties": {"Lieux": "Grangeneuve", "Plante": "Colza", "Traitement": "Standard", "id": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_8ffab3c838d724739cc2fd6097752e36.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Traitement"];
+    let aliases = ["Traitement"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+            var marker_40d93efb3850fbe172bc3ba3c24e3057 = L.marker(
+                [46.76789038918604, 7.113856241760282],
+                {}
+            ).addTo(map_cee163adfb6a29c729b8a1f977c2a776);
+        
+    
+            var div_icon_fb29dce59bf925cc2cf63f629ff2ad1d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; text-align: center; margin: 0 auto; background-color: white; padding: 2px 4px; border: 1px solid black; display: inline-block;\"\u003e0N\u003c/div\u003e", "iconAnchor": [0, 0], "iconSize": [16, 20]});
+            marker_40d93efb3850fbe172bc3ba3c24e3057.setIcon(div_icon_fb29dce59bf925cc2cf63f629ff2ad1d);
+        
+    
+            var marker_4e1acd62e34bf645aec06c5825b2ff79 = L.marker(
+                [46.76779776725758, 7.11322244794901],
+                {}
+            ).addTo(map_cee163adfb6a29c729b8a1f977c2a776);
+        
+    
+            var div_icon_f19348da537c9aea11956ede7cf8c267 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; text-align: center; margin: 0 auto; background-color: white; padding: 2px 4px; border: 1px solid black; display: inline-block;\"\u003eNmin\u003c/div\u003e", "iconAnchor": [0, 0], "iconSize": [32, 20]});
+            marker_4e1acd62e34bf645aec06c5825b2ff79.setIcon(div_icon_f19348da537c9aea11956ede7cf8c267);
+        
+    
+            var marker_152dacdfb4f8311cdd2a26f014265c25 = L.marker(
+                [46.76771767507417, 7.112588236896352],
+                {}
+            ).addTo(map_cee163adfb6a29c729b8a1f977c2a776);
+        
+    
+            var div_icon_3430eb1393293f1679f2608faf43ffd3 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; text-align: center; margin: 0 auto; background-color: white; padding: 2px 4px; border: 1px solid black; display: inline-block;\"\u003eStandard\u003c/div\u003e", "iconAnchor": [0, 0], "iconSize": [64, 20]});
+            marker_152dacdfb4f8311cdd2a26f014265c25.setIcon(div_icon_3430eb1393293f1679f2608faf43ffd3);
+        
+    
+            var tile_layer_75ff221073d202ced72ea69fe0d327c9 = L.tileLayer(
+                "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cee163adfb6a29c729b8a1f977c2a776);
+        
+</script>
+</html>
