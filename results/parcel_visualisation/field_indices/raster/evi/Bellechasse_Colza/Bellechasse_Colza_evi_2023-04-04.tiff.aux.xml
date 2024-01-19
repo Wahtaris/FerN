@@ -1,0 +1,12 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>evi</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">0.84936069625013</MDI>
+      <MDI key="STATISTICS_MEAN">0.75356638263184</MDI>
+      <MDI key="STATISTICS_MINIMUM">0.1629354308929</MDI>
+      <MDI key="STATISTICS_STDDEV">0.075419879264348</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">68.96</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
